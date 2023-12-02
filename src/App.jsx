@@ -33,7 +33,7 @@ const App = () => {
   if (tours.length === 0) {
     return (
       <div className="container">
-        <p>No tours left</p>
+        <h3>No tours left</h3>
         <button
           onClick={() => {
             setIsLoading(true);
