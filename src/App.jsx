@@ -30,9 +30,23 @@ const App = () => {
   if (isLoading) {
     return <Loading />;
   }
-  /* if () { no tour do it
-    return <Loading />;
-  } */
+  if (tours.length === 0) {
+    return (
+      <div className="container">
+        <p>No tours left</p>
+        <button
+          onClick={() => {
+            setIsLoading(true);
+            fetchTours();
+          }}
+          className="refresh-btn btn"
+        >
+          Refresh
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="app container">
       <Tours tours={tours} deleteTour={deleteTour} />

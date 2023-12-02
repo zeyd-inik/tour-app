@@ -264,6 +264,18 @@ ul {
   max-width: 1250px;
   width: 90vw;
   margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.container p {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.container .refresh-btn {
+  width: fit-content;
+  margin: auto;
 }
 
 .tours h2 {
